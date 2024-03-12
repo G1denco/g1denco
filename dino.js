@@ -97,7 +97,7 @@ function spawnTree() {
 
 spawnTree()
 
-SPEED = time() / 10 + 200;
+SPEED = time() + 200;
 
 player.onCollide("tree", () => {
     burp();
