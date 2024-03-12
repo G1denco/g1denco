@@ -122,6 +122,9 @@
             // Go to "lose" scene when we hit a "danger"
             go("lose")
           })
+           onKeyPress("f", (c) => {
+    setFullscreen(!isFullscreen())
+})
           // Fall death
           player.onUpdate(() => {
             if (player.pos.y >= 800) {
@@ -145,7 +148,7 @@
         // Score counter text
         scene("lose", () => {
           add([
-            text("You Lose"),
+            text("You Lose,              Press F to go into fullscreen mode."),
             pos(12),
           ])
           // Press any key to go back
